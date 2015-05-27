@@ -30,8 +30,8 @@ public class PersonController {
     }
 
     @RequestMapping(value = "/custom", method = RequestMethod.GET)
-    public List<Person> findPersonBySurname(@RequestParam("surname") String surname) {
-        return repository.findBySurname(surname);
+    public List<Person> surnameLike(@RequestParam("surname") String surname) {
+        return repository.surnameLike(surname);
     }
 
 }

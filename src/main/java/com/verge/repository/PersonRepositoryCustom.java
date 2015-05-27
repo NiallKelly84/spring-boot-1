@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface PersonRepositoryCustom {
 
-    public List<Person> findBySurname(String surname);
+    public List<Person> surnameLike(String surname);
 }

@@ -17,10 +17,10 @@ public class PersonRepositoryImpl implements PersonRepositoryCustom {
     private EntityManager em;
 
     @Override
-    public List<Person> findBySurname(String surname) {
+    public List<Person> surnameLike(String surname) {
         logger.info("****CALLING CUSTOM REPOSITORY METHOD****");
-        Query query = em.createQuery("SELECT p from Person p WHERE p.surname = :surname")
-                .setParameter("surname", surname);
+        Query query = em.createQuery("SELECT p from Person p WHERE p.surname LIKE :surname")
+                .setParameter("surname", "%" + surname + "%");
         List<Person> people = query.getResultList();
         return people;
     }
