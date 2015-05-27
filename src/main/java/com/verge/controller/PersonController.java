@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import com.verge.entity.Person;
 import com.verge.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,9 +30,14 @@ public class PersonController {
         return person;
     }
 
-    @RequestMapping(value = "/custom", method = RequestMethod.GET)
-    public List<Person> surnameLike(@RequestParam("surname") String surname) {
-        return repository.surnameLike(surname);
+    @RequestMapping(value = "/surname", method = RequestMethod.GET)
+    public List<Person> surnameLike(@RequestParam("query") String query) {
+        return repository.surnameLike(query);
+    }
+
+    @RequestMapping(value = "/firstname", method = RequestMethod.GET)
+    public List<Person> findByFirstName(@RequestParam("query") String query) {
+        return repository.findByFirstName(query);
     }
 
 }
