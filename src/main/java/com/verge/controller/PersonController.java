@@ -29,4 +29,9 @@ public class PersonController {
         return person;
     }
 
+    @RequestMapping(value = "/custom", method = RequestMethod.GET)
+    public List<Person> findPersonBySurname(@RequestParam("surname") String surname) {
+        return repository.findBySurname(surname);
+    }
+
 }
