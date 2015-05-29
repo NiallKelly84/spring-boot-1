@@ -11,7 +11,9 @@ import static org.springframework.data.repository.query.QueryLookupStrategy.Key.
 
 @SpringBootApplication
 @EnableJpaRepositories(value = "com.verge.repository", queryLookupStrategy = CREATE_IF_NOT_FOUND)
+// Entities not found without this
 @EntityScan("com.verge.entity")
+// Controllers not found without this
 @ComponentScan({"com.verge"})
 public class Application {
 
