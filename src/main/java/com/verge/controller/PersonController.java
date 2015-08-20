@@ -25,8 +25,7 @@ public class PersonController {
 
     @RequestMapping(value = "/people/{id}", method = RequestMethod.GET)
     public Person getPersonById(@PathVariable("id") Long id) {
-        Person person = repository.findOne(id);
-        return person;
+        return repository.findOne(id);
     }
 
     @RequestMapping(value = "/surname", method = RequestMethod.GET)
