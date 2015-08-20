@@ -59,7 +59,6 @@ http://checkstyle.sourceforge.net/availablechecks.html
         </module>
         <module name="IllegalThrows"/>
         <module name="IllegalType">
-            <!-- Use @NotNull instead or wait for Java 8 -->
             <property name="illegalClassNames" value="com.google.common.base.Optional"/>
         </module>
         <module name="Indentation">
