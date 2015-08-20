@@ -15,10 +15,9 @@ import static org.springframework.data.repository.query.QueryLookupStrategy.Key.
 @EntityScan("com.verge.entity")
 // Controllers not found without this
 @ComponentScan({"com.verge"})
-public class Application {
+public final class Application {
 
     private Application() {
-
     }
 
     public static void main(String[] args) {
