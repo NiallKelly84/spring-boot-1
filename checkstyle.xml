@@ -58,9 +58,9 @@ http://checkstyle.sourceforge.net/availablechecks.html
             <property name="classes" value="java.lang.Boolean"/>
         </module>
         <module name="IllegalThrows"/>
-        <module name="IllegalType">
-            <property name="illegalClassNames" value="com.google.common.base.Optional"/>
-        </module>
+        <!--<module name="IllegalType">-->
+            <!--<property name="illegalClassNames" value="com.google.common.base.Optional"/>-->
+        <!--</module>-->
         <module name="Indentation">
             <property name="throwsIndent" value="8"/>
         </module>
