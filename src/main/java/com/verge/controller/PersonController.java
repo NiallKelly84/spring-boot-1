@@ -1,12 +1,9 @@
 package com.verge.controller;
 
 import com.google.common.collect.Lists;
-import com.verge.entity.Employee;
 import com.verge.entity.Person;
-import com.verge.repository.EmployeeRepository;
 import com.verge.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

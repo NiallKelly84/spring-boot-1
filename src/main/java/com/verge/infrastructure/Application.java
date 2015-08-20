@@ -17,6 +17,10 @@ import static org.springframework.data.repository.query.QueryLookupStrategy.Key.
 @ComponentScan({"com.verge"})
 public class Application {
 
+    private Application() {
+
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
         migrateDB();
